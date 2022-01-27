@@ -1,4 +1,5 @@
 import pandas as pd
+import re
 
 # df = DataFrame
 df = pd.read_csv('../datasets/house.csv')
@@ -12,4 +13,20 @@ exemplo1 = df.loc[
                 & (df['Price'] <= 300000)
             ]
 
-print(exemplo1)
+# print(exemplo1)
+
+# Localizar apenas um endereço específico
+exemplo2 = df.loc[
+    df['Address'].str.contains('Turner')
+]
+
+# print(exemplo2)
+
+# Localizar apenas um endereço específico que contenha uma palavra ou outra
+# ou é representado pelo pipe |
+# flags=re.I significa que é uma regular expression e o ,I é para ignorar maíusculas e minúsculas e filtrar do mesmo jeito
+exemplo3 = df.loc[
+    df['Address'].str.contains('Turner St | Turner Rd', flags=re.I)
+]
+
+print(exemplo3)
