@@ -29,4 +29,13 @@ exemplo3 = df.loc[
     df['Address'].str.contains('Turner St | Turner Rd', flags=re.I)
 ]
 
-print(exemplo3)
+# print(exemplo3)
+
+# Localizar casa em uma rua específica com um determinado preço
+# regular expressions and conditions
+# ^59 significa inicie com 59
+exemplo4 = df.loc[
+      (df['Address'].str.contains('^59', flags=re.I))
+    & (df['Price'] <= 500000)
+]
+print(exemplo4)

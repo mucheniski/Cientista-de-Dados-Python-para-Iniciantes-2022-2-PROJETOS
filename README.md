@@ -16,3 +16,9 @@ https://www.kaggle.com/
 
 Dataset - Planilhas om dados para serem trabalhados.  
 
+Condicionais  
+~~~
+& e  
+| ou 
+´´´  
+ 
