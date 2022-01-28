@@ -20,5 +20,9 @@ Condicionais
 ~~~
 & e  
 | ou 
-´´´  
- 
+~~~  
+
+O Numpy é a lib usada para trabalhar com arrays.  
+Os arrays podem ser em 1D 2D e 3D como no exemplo abaixo, sempre começando pelo eixo 0  
+![](/images/ArraysExamples.png)   
+
