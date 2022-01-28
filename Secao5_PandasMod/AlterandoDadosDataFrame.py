@@ -1,5 +1,4 @@
 import pandas as pd
-import re
 
 # df = DataFrame
 df = pd.read_csv('../datasets/house.csv')
