@@ -34,4 +34,9 @@ plt.ylabel('US$')
 
 # Adicoinando a legenda e apresentando o gráfico
 plt.legend()
+
+# Salvando o gráfico
+plt.savefig('../grafics/gasPriceCountry.png')
+# OBS: Precisa ser salvo antes do show, porque o show mostra e depois zera o gráfico
+
 plt.show()
