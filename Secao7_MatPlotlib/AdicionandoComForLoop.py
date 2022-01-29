@@ -10,34 +10,17 @@ gasdf = pd.read_csv('../datasets/gas_prices.csv')
 # Adicionando título
 plt.title("Gas Price in US$")
 
-# Adicionando valores (eixo X, eixo Y)
-plt.plot(
-    gasdf['Year'], # Eixo X
-    gasdf['Australia'], # Eixo Y
-    'r.-', # cor e tipo da linha, vermelha pontilhada e com traços entre os pontos
-    label='Australia'
-)
+# Populando os valores com for em uma lista, basta adicionar nesta lista que o gráfico é populado
+list_country = ['Australia', 'USA', 'Italy', 'Germany']
 
-plt.plot(
-    gasdf['Year'],
-    gasdf['Italy'],
-    'y.-',
-    label='Italy'
-)
-
-plt.plot(
-    gasdf['Year'],
-    gasdf['USA'],
-    'b.-',
-    label='USA'
-)
-
-plt.plot(
-    gasdf['Year'],
-    gasdf['Japan'],
-    'g.-',
-    label='Japan'
-)
+for country in gasdf:
+    if country in list_country:
+        plt.plot(
+            gasdf['Year'],
+            gasdf[country],
+            label=country,
+            marker='.'
+        )
 
 # Formatando o valor dos anos no eixo X
 # [::2] do início ao fim apresentando de 2 em 2 anos
