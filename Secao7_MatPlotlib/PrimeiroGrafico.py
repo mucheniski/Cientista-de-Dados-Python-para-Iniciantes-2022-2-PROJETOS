@@ -6,3 +6,8 @@ import matplotlib.pyplot as plt
 gasdf = pd.read_csv('../datasets/gas_prices.csv')
 print(gasdf)
 
+# Criando um gráfico de linhas comparando preços entre 3 países eixos x, y
+plt.plot(gasdf['Year'], gasdf['Australia'])
+plt.plot(gasdf['Year'], gasdf['Italy'])
+plt.plot(gasdf['Year'], gasdf['USA'])
+plt.show()
